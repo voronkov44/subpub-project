@@ -27,15 +27,20 @@ cd subpub-project
 go run cmd/main.go
 ```
 
-#### 3.2. Открываем второй терминал и подписываемся на топик(слушаем порт):
+#### 3.2. Открываем второй терминал и подписываемся на топик(слушаем порт)
+Подписка — это стрим, он ждёт сообщения в консоли:
+
 ```bash
 grpcurl -plaintext -d '{"key":"test-topic"}' localhost:50051 subpub.PubSub/Subscribe
 ```
+*После этой команды терминал "зависает" и будет выводить все новые события.*
 
 #### 3.3. Открываем третий терминал и публикуем сообщение в топик:
+Отправляем события в топик:
 ```bash
-grpcurl -plaintext -d '{"key":"test-topic", "data":"Hellol!"}' localhost:50051 subpub.PubSub/Publish
+grpcurl -plaintext -d '{"key":"test-topic", "data":"Hello from grpcurl!"}' localhost:50051 subpub.PubSub/Publish
 ```
+*Результат должен быть `{}`*
 
 ## 4. Тесты
 В проекте реализовано 4 unit-теста:
