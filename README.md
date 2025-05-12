@@ -47,6 +47,11 @@ grpcurl -plaintext -d '{"key":"test-topic", "data":"Hellol!"}' localhost:50051 s
 | `TestCloseWithContextCancel`         | Обработку отмены контекста при закрытии                                   |
 
 
+### Запуск тестов:
+```bash
+go test -v ./internal/subpub
+```
+
 ### Описание тестов:
 
 1. `TestMultipleIndependentSubscribers`
@@ -128,6 +133,8 @@ grpcurl -plaintext -d '{"key":"test-topic", "data":"Hellol!"}' localhost:50051 s
 - Проверяется, что метод вернул context.Canceled.
 
 **Это проверка корректной обработки отмены контекста при закрытии pubsub'a.**
+
+
 
 
 
