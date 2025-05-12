@@ -28,6 +28,7 @@ go run cmd/main.go
 ```
 
 #### 3.2. Открываем второй терминал и подписываемся на топик(слушаем порт)
+*Требуется установка [grpcurl](https://github.com/fullstorydev/grpcurl), если не установлен смотрите [зависимости]()*
 Подписка — это стрим, он ждёт сообщения в консоли:
 
 ```bash
@@ -158,11 +159,25 @@ go test -v ./internal/subpub
 
 
 ## Зависимости
-### 
-Для установки на MacOS я использовал Homebrew:
+### Установка пакета [grpcurl](https://github.com/fullstorydev/grpcurl)
+
+MacOS (через Homebrew):
 ```bash
 brew install grpcurl
 ```
-Для установки на Linux воспользуйтесь следующей командой:
+
+Linux:
+Для установки на Linux воспользуйтесь установкой через пакет (Go)[https://go.dev/doc/install]
 ```bash
-sudo apt-get install grpcurl
+go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
+```
+Или скачайте бинарник с релизов на [GitHub](https://github.com/fullstorydev/grpcurl/releases)
+
+Windows:
+Для установки на Windows воспользуйтесь установкой через пакет (Go)[https://go.dev/doc/install]
+```bash
+go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
+```
+Или скачайте exe-файл с релизов на [GitHub](https://github.com/fullstorydev/grpcurl/releases)
+*После установки через go install убедитесь, что ваш $GOPATH/bin или $HOME/go/bin добавлен в PATH.*
+
