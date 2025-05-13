@@ -46,6 +46,7 @@ grpcurl -plaintext -d '{"key":"test-topic", "data":"Hello from grpcurl!"}' local
 
 ### 4. Запуск проекта через docker
 Для удобства был написан `dockerfile`, через который можно запустить проект
+*Требуется установка [docker](https://www.docker.com/products/docker-desktop/), если не установлен, смотрите [зависимости]()*
 
 #### 4.1 Сборка образа:
 ```bash
@@ -243,3 +244,5 @@ go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 Или скачайте exe-файл с релизов на [GitHub](https://github.com/fullstorydev/grpcurl/releases)
 *После установки через go install убедитесь, что ваш $GOPATH/bin или $HOME/go/bin добавлен в PATH.*
 
+### Установка docker
+Установка пакета [Docker Engine](https://docs.docker.com/engine/install/)
