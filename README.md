@@ -42,11 +42,12 @@ grpcurl -plaintext -d '{"key":"test-topic"}' localhost:50051 subpub.PubSub/Subsc
 ```bash
 grpcurl -plaintext -d '{"key":"test-topic", "data":"Hello from grpcurl!"}' localhost:50051 subpub.PubSub/Publish
 ```
-*Результат должен быть `{}`*
+*Результат должен быть `{}`, а на втором терминале вывод нашего сообщения*
 
 ### 4. Запуск проекта через docker
 Для удобства был написан `dockerfile`, через который можно запустить проект
-*Требуется установка [docker](https://www.docker.com/products/docker-desktop/), если не установлен, смотрите [зависимости]()*
+
+*Требуется установка [docker](https://www.docker.com/products/docker-desktop/), если не установлен, смотрите [зависимости.](https://github.com/voronkov44/subpub-project?tab=readme-ov-file#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-docker)*
 
 #### 4.1 Сборка образа:
 ```bash
@@ -57,7 +58,6 @@ docker build -t subpub:v1 .
 ```bash
 docker run -d --name subpub-server -p 50051:50051 subpub:v5
 ```
-должен вернуться айди контейнера
 
 #### 4.3 Проверка что наш контейнер действительно создался:
 ```bash
@@ -80,10 +80,10 @@ grpcurl -plaintext -d '{"key":"test-topic"}' localhost:50051 subpub.PubSub/Subsc
 ```bash
 grpcurl -plaintext -d '{"key":"test-topic", "data":"Hello from grpcurl!"}' localhost:50051 subpub.PubSub/Publish
 ```
-*Результат должен быть `{}`*
+*Результат должен быть `{}`, а на втором терминале вывод нашего сообщения*
 
 
-Общие команды для управления контейнерами:
+#### Общие команды для управления контейнерами:
 ```
 # Просмотр запущенных контейнеров
 docker ps
