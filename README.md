@@ -231,7 +231,7 @@ brew install grpcurl
 
 Linux:
 
-Для установки на Linux воспользуйтесь установкой через пакет [Go](https://go.dev/doc/install)
+Для установки на Linux воспользуйтесь установкой через пакет [Go](https://go.dev/doc/install):
 
 ```bash
 go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
@@ -240,7 +240,7 @@ go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 
 Windows:
 
-Для установки на Windows воспользуйтесь установкой через пакет [Go](https://go.dev/doc/install)
+Для установки на Windows воспользуйтесь установкой через пакет [Go](https://go.dev/doc/install):
 
 ```bash
 go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
